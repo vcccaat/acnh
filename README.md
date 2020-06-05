@@ -1,7 +1,7 @@
 
 # Animal Crossing database
 Animal Crossing: New Horizons database page display all fish, bugs, villagers info and allow filtering and price sorting.
-![demo-pic]('./src/assets/demo.png')
+![demo-pic]('./src/assets/demo.jpg')
 
 To run the project:
 
