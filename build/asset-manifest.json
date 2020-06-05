@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/AnimalCrossingDB/static/css/main.2f6dfda0.chunk.css",
+    "main.js": "/AnimalCrossingDB/static/js/main.d9d7a4ca.chunk.js",
+    "main.js.map": "/AnimalCrossingDB/static/js/main.d9d7a4ca.chunk.js.map",
+    "runtime-main.js": "/AnimalCrossingDB/static/js/runtime-main.bf6f7854.js",
+    "runtime-main.js.map": "/AnimalCrossingDB/static/js/runtime-main.bf6f7854.js.map",
+    "static/css/2.abd97b8c.chunk.css": "/AnimalCrossingDB/static/css/2.abd97b8c.chunk.css",
+    "static/js/2.17125014.chunk.js": "/AnimalCrossingDB/static/js/2.17125014.chunk.js",
+    "static/js/2.17125014.chunk.js.map": "/AnimalCrossingDB/static/js/2.17125014.chunk.js.map",
+    "index.html": "/AnimalCrossingDB/index.html",
+    "precache-manifest.8e873fb42b8370b7988be7140e5fd197.js": "/AnimalCrossingDB/precache-manifest.8e873fb42b8370b7988be7140e5fd197.js",
+    "service-worker.js": "/AnimalCrossingDB/service-worker.js",
+    "static/css/2.abd97b8c.chunk.css.map": "/AnimalCrossingDB/static/css/2.abd97b8c.chunk.css.map",
+    "static/css/main.2f6dfda0.chunk.css.map": "/AnimalCrossingDB/static/css/main.2f6dfda0.chunk.css.map",
+    "static/js/2.17125014.chunk.js.LICENSE.txt": "/AnimalCrossingDB/static/js/2.17125014.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/AnimalCrossingDB/static/media/SEGA.12a3db8b.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf6f7854.js",
+    "static/css/2.abd97b8c.chunk.css",
+    "static/js/2.17125014.chunk.js",
+    "static/css/main.2f6dfda0.chunk.css",
+    "static/js/main.d9d7a4ca.chunk.js"
+  ]
+}
