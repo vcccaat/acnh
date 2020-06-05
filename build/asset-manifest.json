@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/vcccaat/AnimalCrossingDB/static/css/main.31994dab.chunk.css",
-    "main.js": "/vcccaat/AnimalCrossingDB/static/js/main.f11548b4.chunk.js",
-    "main.js.map": "/vcccaat/AnimalCrossingDB/static/js/main.f11548b4.chunk.js.map",
-    "runtime-main.js": "/vcccaat/AnimalCrossingDB/static/js/runtime-main.85f2b331.js",
-    "runtime-main.js.map": "/vcccaat/AnimalCrossingDB/static/js/runtime-main.85f2b331.js.map",
-    "static/css/2.abd97b8c.chunk.css": "/vcccaat/AnimalCrossingDB/static/css/2.abd97b8c.chunk.css",
-    "static/js/2.17125014.chunk.js": "/vcccaat/AnimalCrossingDB/static/js/2.17125014.chunk.js",
-    "static/js/2.17125014.chunk.js.map": "/vcccaat/AnimalCrossingDB/static/js/2.17125014.chunk.js.map",
-    "index.html": "/vcccaat/AnimalCrossingDB/index.html",
-    "precache-manifest.e777bb402d6215ef0e50684a54d838fc.js": "/vcccaat/AnimalCrossingDB/precache-manifest.e777bb402d6215ef0e50684a54d838fc.js",
-    "service-worker.js": "/vcccaat/AnimalCrossingDB/service-worker.js",
-    "static/css/2.abd97b8c.chunk.css.map": "/vcccaat/AnimalCrossingDB/static/css/2.abd97b8c.chunk.css.map",
-    "static/css/main.31994dab.chunk.css.map": "/vcccaat/AnimalCrossingDB/static/css/main.31994dab.chunk.css.map",
-    "static/js/2.17125014.chunk.js.LICENSE.txt": "/vcccaat/AnimalCrossingDB/static/js/2.17125014.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/vcccaat/AnimalCrossingDB/static/media/SEGA.12a3db8b.woff"
+    "main.css": "./static/css/main.e8bffe1e.chunk.css",
+    "main.js": "./static/js/main.a529353a.chunk.js",
+    "main.js.map": "./static/js/main.a529353a.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.a334793c.js",
+    "runtime-main.js.map": "./static/js/runtime-main.a334793c.js.map",
+    "static/css/2.abd97b8c.chunk.css": "./static/css/2.abd97b8c.chunk.css",
+    "static/js/2.17125014.chunk.js": "./static/js/2.17125014.chunk.js",
+    "static/js/2.17125014.chunk.js.map": "./static/js/2.17125014.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.975dc5386e5ee4fcded92a5673765103.js": "./precache-manifest.975dc5386e5ee4fcded92a5673765103.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.abd97b8c.chunk.css.map": "./static/css/2.abd97b8c.chunk.css.map",
+    "static/css/main.e8bffe1e.chunk.css.map": "./static/css/main.e8bffe1e.chunk.css.map",
+    "static/js/2.17125014.chunk.js.LICENSE.txt": "./static/js/2.17125014.chunk.js.LICENSE.txt",
+    "static/media/App.css": "./static/media/SEGA.12a3db8b.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.85f2b331.js",
+    "static/js/runtime-main.a334793c.js",
     "static/css/2.abd97b8c.chunk.css",
     "static/js/2.17125014.chunk.js",
-    "static/css/main.31994dab.chunk.css",
-    "static/js/main.f11548b4.chunk.js"
+    "static/css/main.e8bffe1e.chunk.css",
+    "static/js/main.a529353a.chunk.js"
   ]
 }

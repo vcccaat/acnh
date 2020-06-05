@@ -1,8 +1,7 @@
 {
   "name": "animalcrossing",
-  "homepage": "https://github.com/vcccaat/AnimalCrossingDB",
+  "homepage": "./",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "bootstrap": "^4.5.0",
     "gh-pages": "^3.0.0",
