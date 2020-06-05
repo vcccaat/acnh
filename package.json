@@ -1,9 +1,11 @@
 {
   "name": "animalcrossing",
+  "homepage": "https://github.com/vcccaat/AnimalCrossingDB/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "gh-pages": "^3.0.0",
     "react": "^16.13.1",
     "react-bootstrap-spinner": "^1.0.0",
     "react-dom": "^16.13.1",
@@ -11,6 +13,8 @@
     "tachyons": "^4.12.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
