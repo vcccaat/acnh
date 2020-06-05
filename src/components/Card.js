@@ -15,7 +15,7 @@ const Card = ({ name, price, id, time, month, region, category }) => {
   return (
   	<div className="item-card">
       <img alt='items' src={`https://acnhapi.com/v1/images/${category}/${item_id}?size=200x200`} />
-        <h4>{name}</h4> 
+        <h4 className="name-text">{name}</h4>
         {info}
     </div>
   );

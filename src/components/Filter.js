@@ -17,7 +17,7 @@ import React from 'react';
 	render() {
 		return(
 		<form>
-		选择地区  <div className="btn-group" role="group">
+		地区  <div className="btn-group" role="group">
 			<button type="button" className={this.state.clicked===1?'btn btn-info active':'btn btn-info'}
 			onClick={()=>{this.handleClick(1); this.props.setRegion('month-southern');}
 			}>南半球</button>
@@ -43,20 +43,39 @@ class Month extends React.Component {
  		})
  	}
 
+ // 	makeButtonGroup = (beginWith) => {
+
+	// 	const button = Array(6).fill().map((_,i)=> {
+	// 	const month = i + beginWith; 
+	// 	const element = 
+	// 		<button key={month} type="button" className={this.state.clicked===month?'btn btn-info active responsive':'btn btn-info responsive'}
+	// 		onClick={()=>{this.handleClick(month); this.props.setMonth(month);}}>{month}</button>
+			
+	// 	return element
+	// })
+	// 	return <div className="btn-group" role="group">{button}</div>
+ // 	}
+
  	render() {
-	const buttons = Array(12).fill().map((_,i)=> {
-		const month = i + 1; 
-		const element = <button key={i} type="button" className={this.state.clicked===i?'btn btn-info active':'btn btn-info'}
-			onClick={()=>{this.handleClick(i); this.props.setMonth(month);}}>{month}</button>
-		
-		return element
+ 		// const button1 = this.makeButtonGroup(1)
+ 		// const button2 = this.makeButtonGroup(7)
+ 		const button = Array(12).fill().map((_,i)=> {
+			const month = i + 1; 
+			const element = 
+				<button key={month} type="button" className={this.state.clicked===month?'btn btn-info active responsive':'btn btn-info responsive'}
+				onClick={()=>{this.handleClick(month); this.props.setMonth(month);}}>{month}</button>
+			return element
 	})
-	return (
-		<form>
-		选择月份  <div className="btn-group" role="group">
-			{buttons}
+
+		return (
+			<div className="month-filter">
+			<form>
+			月份
+			<div className="btn-group" role="group">
+			{button}
 			</div>
-		</form>
+			</form>
+			</div>
 		
 		);
 }
@@ -79,7 +98,7 @@ class Month extends React.Component {
  	render() {
 	return(
 		<form>
-		查看类别  <div className="btn-group" role="group">
+		类别  <div className="btn-group" role="group">
 			<button type="button" className={this.state.clicked===1?'btn btn-info active':'btn btn-info'}
 			onClick={()=>{this.handleClick(1); this.props.setCategory('fish');}}>鱼类</button>
 			<button type="button" className={this.state.clicked===2?'btn btn-info active':'btn btn-info'}

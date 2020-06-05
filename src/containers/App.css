@@ -21,7 +21,43 @@ p {
 .container {
 	display: grid; 
 	grid-gap: 20px; 
-	grid-template-columns: repeat(auto-fill, minmax(200px, 3fr)); }
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  	.container {
+  		display: grid; 
+		grid-gap: 5px; 
+		grid-template-columns: repeat(2,1fr);
+  	}
+  	p {
+  		font-size: 12px;
+  		line-height: 0.3;
+  	}
+  	h4.name-text {
+  		font-size: 12px;
+  	}
+  	div.filter {
+	margin-left: 15px;
+}
+	form {
+	font-size: 14px;
+	}
+	div.month-filter {
+		line-height: 10px;
+	}
+	button.responsive {
+		font-size: 7px;
+		font-weight: 900;
+		margin-top: 5px;
+	}
+
+}
+
+
 
 .searchbar {
 	border: 2px solid rgba(94, 223, 255, 0.4);
@@ -77,21 +113,6 @@ p {
 
 .active {
 	background-color: rgb(12, 121, 138);
-}
-
-.buttonFalse {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: red;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
 }
 
 
