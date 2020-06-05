@@ -1,15 +1,14 @@
 {
   "name": "animalcrossing",
-  "homepage": "./",
+  "homepage": "http://vcccaat.github.io/AnimalCrossingDB",
   "version": "0.1.0",
   "dependencies": {
-    "bootstrap": "^4.5.0",
-    "gh-pages": "^3.0.0",
-    "react": "^16.13.1",
+    "react": "^16.12.0",
     "react-bootstrap-spinner": "^1.0.0",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1",
-    "tachyons": "^4.12.0"
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.4.0",
+    "tachyons": "^4.11.1",
+    "gh-pages": "^2.1.1"
   },
   "scripts": {
     "predeploy": "npm run build",
