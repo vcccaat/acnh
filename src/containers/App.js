@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import {Region, Month, Category, FilterPrice} from '../components/Filter';
 // import Scroll from '../components/Scroll';
+import ScrollButton from '../components/ScrollButton';
 import './App.css';
 import ReactSpinner from 'react-bootstrap-spinner'
 
@@ -113,7 +114,7 @@ class App extends Component {
       : 
       (
         <div className='tc'>
-          <h1 className='f1'>Animal Crossing</h1>
+          <h1 className='f1 mt-3'>Animal Crossing</h1>
             <div className="filter-row">
               <Region setRegion={this.setRegion}/>
               <Month setMonth={this.setMonth}/>
@@ -126,6 +127,13 @@ class App extends Component {
             <div className="container">       
               <CardList items={items_array} region={this.state.region} category={this.state.category}/>
             </div>
+            <div className="footer">
+            <a href="https://github.com/vcccaat/AnimalCrossingDB">GitHub </a>
+            <p> 如有问题请联系: 602471671@qq.com </p>
+            </div>
+
+            <ScrollButton scrollStepInPx="100" delayInMs="10.66"/>
+         
         </div>
       );
   }

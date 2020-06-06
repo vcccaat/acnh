@@ -13,10 +13,12 @@ const Card = ({ name, price, id, time, month, region, category }) => {
         <p>时间: {time_display}</p> {month_display} </div>
   }
   return (
-  	<div className="item-card">
+    <div className="item-card">
+  	{/* <div className={category==='bugs'?"item-card-bugs":category==="fish"?"item-card-fish":'item-card'}> */}
       <img alt='items' src={`https://acnhapi.com/v1/images/${category}/${item_id}?size=200x200`} />
         <h4 className="name-text">{name}</h4>
         {info}
+    {/*</div>*/}
     </div>
   );
 }
