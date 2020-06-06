@@ -70,8 +70,7 @@ class Month extends React.Component {
 		return (
 			<div className="month-filter">
 			<form>
-			月份
-			<div className="btn-group" role="group">
+			月份 <div className="btn-group" role="group">
 			{button}
 			</div>
 			</form>
