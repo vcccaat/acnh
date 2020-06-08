@@ -1,11 +1,12 @@
 
 # NS动物森友会简单网页版图鉴
-A simple website to display and search Animal Crossing fish, bugs, and villagers information.
-Website: https://vcccaat.github.io/AnimalCrossingDB/
+Animal Crossing: New Horizons React APP
+A simple website to display, sort and search Animal Crossing fish, bugs, furnitures and villagers information.
+Website: https://vcccaat.github.io/acnh/
 
-![demo-web](src/assets/demo-fish.png)
-![demo-mobile](src/assets/demo-bugs.png)
-
+![demo1](src/assets/fish-demo.jpg)
+![demo2](src/assets/bugs-demo.jpg)
+![demo3](src/assets/mobile-demo.jpg)
 
 To run the project:
 1. Clone this repo

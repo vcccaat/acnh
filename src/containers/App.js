@@ -114,7 +114,8 @@ class App extends Component {
     if (this.state.rank === 1) {filteredItem = array}
 
     // month filter
-    if (this.state.month !== '' ){
+    if (this.state.month !== '' && this.state.category!=='furnitures' 
+      && this.state.category !== 'villagers'){
       filteredItem = filteredItem.filter(item => {
         const region = this.state.region===
         'month-southern'?'month-array-southern':'month-array-northern'
