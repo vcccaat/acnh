@@ -2,6 +2,22 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(to left, rgba(74, 226, 213) 0%, rgba(74,214,226) 100%); /* w3c */
+  position: relative;
+
 }
 
+body::before {
+  content: "";
+  background:  url("./assets/bg.jpg");
+  background-size: cover;
+  margin-top: -20px;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -1;   
+}

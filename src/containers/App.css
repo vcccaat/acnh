@@ -14,6 +14,7 @@ h1 {
 
 p {
 	font-family: 'Helvetica Neue';
+	line-height: 25px;
 }
  
 img {
@@ -30,8 +31,8 @@ img {
   display:block;
   background-color: grey;
   color: white;
-  margin-top: 20px;
-  height: 70px;
+  margin-top: 500px;
+  height: 30px;
 }
 
 .scroll {
@@ -62,7 +63,7 @@ img {
   
 .searchbar {
 	border: 2px solid rgba(94, 223, 255, 0.4);
-	margin-bottom: 50px;
+	margin-bottom: 0px;
 	height: 40px;
 }
 
@@ -70,11 +71,8 @@ img {
 	display:flex;
 	justify-content: flex-start;
 	margin-left: 80px;
+	margin-top: 20px;
 	margin-bottom: 20px;
-}
-
-.item-card-info {
-
 }
 
 
@@ -99,7 +97,7 @@ img {
 .item-card-fish::before {
 	background-color: rgba(255, 255, 255, 1);
 	background-image: url('../assets/cj.png'); 
-	opacity: 0.4;
+	opacity: 0.3;
 	content: "";
 	top: 0;
 	left: 0;
@@ -139,7 +137,7 @@ img {
 
 .item-card-bugs::before {
 	background-image: url('../assets/flick.png'); 
-	opacity: 0.5;
+	opacity: 0.3;
 	content: "";
 	top: 0;
 	left: 0;
@@ -192,12 +190,26 @@ img {
   and (-webkit-min-device-pixel-ratio: 2) {
   	.container {
   		display: grid; 
-		grid-gap: 5px; 
-		grid-template-columns: repeat(2,1fr);
+		grid-gap: 10px; 
+		grid-template-columns: repeat(3,1fr);
+
   	}
+ 	.item-card-fish::before {
+		background-size: cover;
+		opacity: 0.3;
+	}
+	.item-card-bugs::before {
+		background-size: cover;
+		opacity: 0.3;
+	}
+
   	p {
   		font-size: 12px;
-  		line-height: 0.3;
+  		margin-bottom: 0px;
+  		line-height: 20px;
+  	}
+  	div.info {
+
   	}
   	h4.name-text {
   		font-size: 12px;
@@ -211,10 +223,14 @@ img {
 	div.month-filter {
 		line-height: 10px;
 	}
-	button.responsive {
+	button.responsive-sm {
 		font-size: 7px;
 		font-weight: 900;
 		margin-top: 5px;
+	}
+	button.responsive {
+	font-size: 12px;
+	margin-top: 5px;
 	}
 
 }
