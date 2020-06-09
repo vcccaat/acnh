@@ -31,7 +31,10 @@ const CardList = ({ items,region,category}) => {
             id={item[1].id}
             name={item[1].name['name-CNzh']}
             birthday={item[1].birthday}
-            category={category}/>
+            category={category}
+            gender={item[1].gender}
+            personality={item[1].personality}
+            species={item[1].species}/>
           )
           })
     );
@@ -40,6 +43,7 @@ else if (category === 'furnitures') {
   return (
     items.map((item, i) => {
     const imageNames = item[1].map(variant=>variant['file-name'])
+
     return (
       <Card
       key={i}

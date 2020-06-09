@@ -6,7 +6,7 @@ import {FishShadowBtn,FishLocationBtn} from '../components/Filter';
 // import Scroll from '../components/Scroll';
 import ScrollButton from '../components/ScrollButton';
 import './App.css';
-import ReactSpinner from 'react-bootstrap-spinner'
+import BarLoader from "react-spinners/BarLoader";
 import fish from '../data/fish.json'
 import bugs from '../data/bugs.json'
 import villagers from '../data/villagers.json'
@@ -162,10 +162,9 @@ class App extends Component {
     this.state.isLoading ?
       <div className='tc loading' >
           <h1 >Loading</h1> 
-          <ReactSpinner type="grow" color="secondary" />
-          <ReactSpinner type="grow" color="secondary" />
-          <ReactSpinner type="grow" color="secondary" />
-      </div> : 
+          <BarLoader/>
+      </div> 
+      : 
         <div className='tc'>
           <h1 className='f1 mt-3'>Animal Crossing</h1>
             <div className="filter-row">
@@ -183,7 +182,7 @@ class App extends Component {
                         />
             </div>
             <div className="footer">
-            <a href="https://github.com/vcccaat/AnimalCrossingDB">GitHub </a>
+            <a href="https://github.com/vcccaat/acnh">GitHub </a>
             </div>
 
             <ScrollButton scrollStepInPx="100" delayInMs="10.66"/>

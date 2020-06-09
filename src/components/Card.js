@@ -1,11 +1,10 @@
 import React from 'react';
 import '../containers/App.css';
-import ImageLoader from 'react-load-image';
-import ReactSpinner from 'react-bootstrap-spinner'
+import BarLoader from "react-spinners/BarLoader";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
-
-const Card = ({ name, price, shadow, location, id, time, month, region, category,birthday,buyPrice, imageNames}) => {
+const Card = ({ name, price, shadow, location, id, time, month, region, category,birthday,buyPrice, imageNames,species,personality}) => {
 
   const item_id = id
   const time_display = time?time:'随机'
@@ -27,39 +26,42 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
 
     return (
     	<div className={category==="bugs"?"item-card-bugs":"item-card-fish"}>
-        <img alt="icon" src={require(`../../public/images/${category}/${item_id}.png`)}/>
+        <LazyLoadImage
+        alt={"icon"}
+        effect="opacity"
+        placeholder={<BarLoader color="aqua"/>}
+        src={require(`../../public/images/${category}/${item_id}.png`)}
+        />
           <h4 className="name-text">{name}</h4>
           {info}
       </div>
     )
     }
     else if  (category === 'villagers') {
-      info = <p>生日: {birthday}</p>
+      info = <p>种族:{species} <br/> 性格:{personality} <br/>生日: {birthday}</p>
       return (
       <div className="item-card">
-        <ImageLoader
-          src={`https://acnhapi.com/v1/images/villagers/${item_id}`}
-        >
-          <img alt="icon"/>
-          <div>Error!</div>
-          <ReactSpinner type="border" />
-        </ImageLoader>
-        <h4 className="name-text"><br/>{name}</h4>
+        <LazyLoadImage
+        alt={"icon"}
+        effect="opacity"
+        placeholder={<BarLoader color="aqua"/>}
+        src={require(`../../public/images/${category}/${item_id}.png`)}
+        />
+        <h4 className="name-text">{name}</h4>
         {info}
       </div>
     );
     }
     else if (category === 'furnitures') {
-      info = <div><p>价格: {buyPrice===null?'需DIY':buyPrice}</p></div>
+      info =<p>价格: {buyPrice===null?'需DIY':buyPrice}</p>
       return (
       <div className="item-card">
-        <ImageLoader
-          src={`https://acnhapi.com/v1/images/furniture/${imageNames[0]}`}
-        >
-          <img alt="icon"/>
-          <div>Error!</div>
-          <ReactSpinner type="border" />
-        </ImageLoader>
+        <LazyLoadImage
+        alt={"icon"}
+        effect="opacity"
+        placeholder={<BarLoader color="aqua"/>}
+        src={require(`../../public/images/${category}/${imageNames[0]}.png`)} 
+        />
         <h4 className="name-text">{name}</h4>
         {info}
       </div>

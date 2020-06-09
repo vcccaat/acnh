@@ -11,4 +11,5 @@ Website: https://vcccaat.github.io/acnh/
 To run the project:
 1. Clone this repo
 2. Run `npm install`
+3. Run `public/images/download_img.py` to download fish, bugs, furnitures, villagers images
 3. Run `npm start`
