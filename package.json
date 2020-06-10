@@ -1,7 +1,8 @@
 {
   "name": "AnimalCrossingDB",
-  "homepage": "http://vcccaat.github.io/acnh",
-  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "version": "1.1.0",
   "dependencies": {
     "bootstrap": "^4.5.0",
     "react": "^16.12.0",
