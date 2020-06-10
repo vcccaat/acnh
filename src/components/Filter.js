@@ -50,39 +50,26 @@ class Month extends React.Component {
 		this.props.setMonth(input);
  	}
 
- // 	makeButtonGroup = (beginWith) => {
-	// 	const button = Array(6).fill().map((_,i)=> {
-	// 	const month = i + beginWith; 
-	// 	const element = 
-	// 		<button key={month} type="button" className={this.state.clicked===month?'btn btn-info active responsive':'btn btn-info responsive'}
-	// 		onClick={()=>{this.handleClick(month); this.props.setMonth(month);}}>{month}</button>
+ 	makeButtonGroup = (beginWith) => {
+		const button = Array(6).fill().map((_,i)=> {
+		const month = i + beginWith; 
+		const element = 
+			<button key={month} type="button" className={this.state.clicked===month?'btn btn-info active responsive':'btn btn-info responsive'}
+			onClick={()=>{this.handleClick(month); this.props.setMonth(month);}}>{month}月</button>
 			
-	// 	return element
-	// })
-	// 	return <div className="btn-group" role="group">{button}</div>
- // 	}
+		return element
+	})
+		return <div className="btn-group" role="group">{button}</div>
+ 	}
 
 
  	render() {
- 		// const button1 = this.makeButtonGroup(1)
- 		// const button2 = this.makeButtonGroup(7)
- 		const button = Array(12).fill().map((_,i)=> {
-			const month = i + 1; 
-			const element = 
-				<button key={month} type="button" className={this.state.clicked===month?'btn btn-info active responsive-sm':'btn btn-info responsive-sm'}
-				onClick={()=>this.onClickChange(month)}>{month}</button>
-			return element
-	})
-
+ 		const button1 = this.makeButtonGroup(1)
+ 		const button2 = this.makeButtonGroup(7)
 		return (
 			<div className="month-filter">
-			<form>
-			月份 <div className="btn-group" role="group">
-			{button}
+			{button1} {button2}
 			</div>
-			</form>
-			</div>
-		
 		);
 }
 }

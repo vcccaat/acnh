@@ -63,7 +63,7 @@ img {
   
 .searchbar {
 	border: 2px solid rgba(94, 223, 255, 0.4);
-	margin-bottom: 0px;
+	/*margin-bottom: 0px;*/
 	height: 40px;
 }
 
@@ -174,14 +174,18 @@ img {
 	justify-content: center;
 	line-height: 50px;
 }
-
-.loading {
-	margin-top: 300px;
+.box {
+	line-height: 500px;
+	height: 500px;
+	text-align:center;
 }
-
 
 .active {
 	background-color: rgb(12, 121, 138);
+}
+
+.month-filter{
+	display: block；
 }
 
 @media only screen 
@@ -202,14 +206,10 @@ img {
 		background-size: cover;
 		opacity: 0.3;
 	}
-
   	p {
   		font-size: 12px;
   		margin-bottom: 0px;
   		line-height: 20px;
-  	}
-  	div.info {
-
   	}
   	h4.name-text {
   		font-size: 12px;
@@ -219,20 +219,15 @@ img {
 }
 	form {
 	font-size: 14px;
+	line-height: 100%;
 	}
 	div.month-filter {
-		line-height: 10px;
-	}
-	button.responsive-sm {
-		font-size: 7px;
-		font-weight: 900;
-		margin-top: 5px;
+	line-height: 10px;
 	}
 	button.responsive {
 	font-size: 12px;
-	margin-top: 5px;
+	margin-bottom: 8px;
 	}
-	.searchbar{height: 45px;}
 
 }
 

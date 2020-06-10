@@ -1,7 +1,5 @@
 import React from 'react';
 import '../containers/App.css';
-import BarLoader from "react-spinners/BarLoader";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 const Card = ({ name, price, shadow, location, id, time, month, region, category,birthday,buyPrice, imageNames,species,personality}) => {
@@ -26,10 +24,7 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
 
     return (
     	<div className={category==="bugs"?"item-card-bugs":"item-card-fish"}>
-        <LazyLoadImage
-        alt={"icon"}
-        effect="opacity"
-        placeholder={<BarLoader color="aqua"/>}
+        <img alt="icon"
         src={require(`../../public/images/${category}/${item_id}.png`)}
         />
           <h4 className="name-text">{name}</h4>
@@ -41,10 +36,7 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
       info = <p>种族:{species} <br/> 性格:{personality} <br/>生日: {birthday}</p>
       return (
       <div className="item-card">
-        <LazyLoadImage
-        alt={"icon"}
-        effect="opacity"
-        placeholder={<BarLoader color="aqua"/>}
+        <img alt="icon"
         src={require(`../../public/images/${category}/${item_id}.png`)}
         />
         <h4 className="name-text">{name}</h4>
@@ -56,10 +48,7 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
       info =<p>价格: {buyPrice===null?'需DIY':buyPrice}</p>
       return (
       <div className="item-card">
-        <LazyLoadImage
-        alt={"icon"}
-        effect="opacity"
-        placeholder={<BarLoader color="aqua"/>}
+        <img alt="icon"
         src={require(`../../public/images/${category}/${imageNames[0]}.png`)} 
         />
         <h4 className="name-text">{name}</h4>

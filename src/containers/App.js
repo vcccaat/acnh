@@ -6,7 +6,6 @@ import {FishShadowBtn,FishLocationBtn} from '../components/Filter';
 // import Scroll from '../components/Scroll';
 import ScrollButton from '../components/ScrollButton';
 import './App.css';
-import BarLoader from "react-spinners/BarLoader";
 import fish from '../data/fish.json'
 import bugs from '../data/bugs.json'
 import villagers from '../data/villagers.json'
@@ -66,7 +65,10 @@ class App extends Component {
   }
 
   setCategory = (category) => {
-    this.setState({category:category
+    this.setState({category:category, searchfield:'', fishInfo:{
+        shadow:'',
+        location:''
+      }
     })    
   }
 
@@ -160,10 +162,9 @@ class App extends Component {
 
     return  (
     this.state.isLoading ?
-      <div className='tc loading' >
-          <h1 >Loading</h1> 
-          <BarLoader/>
-      </div> 
+    <div>
+    <h1><div className='box'>Loading</div></h1>
+    </div>
       : 
         <div className='tc'>
           <h1 className='f1 mt-3'>Animal Crossing</h1>
