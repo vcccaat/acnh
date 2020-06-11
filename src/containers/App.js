@@ -183,7 +183,9 @@ class App extends Component {
                         />
             </div>
             <div className="footer">
-            <a href="https://github.com/vcccaat/acnh">GitHub </a>
+           
+            <span>本网站及其内容仅可用于非商业性的个人用途，侵权请联系
+            <a href="https://github.com/vcccaat/acnh"> GitHub </a></span>
             </div>
 
             <ScrollButton scrollStepInPx="100" delayInMs="10.66"/>
