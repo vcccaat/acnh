@@ -1,7 +1,7 @@
 {
   "name": "AnimalCrossingDB",
   "private": true,
-  "homepage": "https://vcccaat.github.io/AnimalCrossingDatabase",
+  "homepage": ".",
   "version": "1.3.0",
   "dependencies": {
     "bootstrap": "^4.5.0",

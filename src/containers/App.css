@@ -21,6 +21,9 @@ img {
 	width: 100%;
 }
 
+.wrapper {
+	display: inline-block;
+}
 .container {
 	display: grid; 
 	grid-gap: 20px; 
@@ -70,7 +73,7 @@ img {
 .filter {
 	display:flex;
 	justify-content: flex-start;
-	margin-left: 80px;
+	/*margin-left: 80px;*/
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -228,6 +231,8 @@ img {
 	font-size: 12px;
 	margin-bottom: 8px;
 	}
-
+	.footer span {
+		font-size: 8px;
+	}
 }
 
