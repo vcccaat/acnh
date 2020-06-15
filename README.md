@@ -7,5 +7,4 @@ Website: https://nsds.info
 To run the project:
 1. Clone this repo
 2. Run `npm install`
-3. Download fish, bugs, furnitures, villagers images to `public/images` from https://acnhapi.com/
 3. Run `npm start`
