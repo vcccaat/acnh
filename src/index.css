@@ -1,23 +1,22 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  position: relative;
 }
 
 
-body::before {
+body::after {
   content: "";
-  background:  url("./assets/bg.jpg");
-  background-size: cover;
-  margin-top: -20px;
-  opacity: 0.5;
+  background:  url("./assets/bg.jpg") no-repeat center center;
+  display: block;
+  position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: absolute;
-  z-index: -1;   
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.5;
 }

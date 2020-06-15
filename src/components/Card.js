@@ -1,6 +1,7 @@
 import React from 'react';
 import '../containers/App.css';
-
+import ImageLoader from 'react-load-image';
+import BeatLoader from "react-spinners/BeatLoader";
 
 const Card = ({ name, price, shadow, location, id, time, month, region, category,birthday,buyPrice, imageNames,species,personality}) => {
 
@@ -23,10 +24,13 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
      {fishInfo}  {month_display}</p> 
 
     return (
-    	<div className={category==="bugs"?"item-card-bugs":"item-card-fish"}>
-        <img alt="icon"
-        src={require(`../../public/images/${category}/${item_id}.png`)}
-        />
+    	<div className="item-card">
+          <ImageLoader
+          src={require(`../assets/images/${item_id}${category}.png`)}>
+          <img alt="icon"/>
+          <div>Error!</div>
+          <BeatLoader color={"#50E3C2"}/>
+        </ImageLoader>
           <h4 className="name-text">{name}</h4>
           {info}
       </div>
@@ -36,9 +40,12 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
       info = <p>种族:{species} <br/> 性格:{personality} <br/>生日: {birthday}</p>
       return (
       <div className="item-card">
-        <img alt="icon"
-        src={require(`../../public/images/${category}/${item_id}.png`)}
-        />
+        <ImageLoader
+          src={require(`../assets/images/${item_id}${category}.png`)}>
+          <img alt="icon"/>
+          <div>Error!</div>
+          <BeatLoader color={"#50E3C2"}/>
+        </ImageLoader>
         <h4 className="name-text">{name}</h4>
         {info}
       </div>
@@ -48,9 +55,12 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
       info =<p>价格: {buyPrice===null?'需DIY':buyPrice}</p>
       return (
       <div className="item-card">
-        <img alt="icon"
-        src={require(`../../public/images/${category}/${imageNames[0]}.png`)} 
-        />
+        <ImageLoader
+          src={require(`../assets/images/${imageNames}.png`)}>
+          <img alt="icon"/>
+          <div>Error!</div>
+          <BeatLoader color={"#50E3C2"}/>
+        </ImageLoader>
         <h4 className="name-text">{name}</h4>
         {info}
       </div>

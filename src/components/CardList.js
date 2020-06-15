@@ -9,14 +9,14 @@ const CardList = ({ items,region,category}) => {
       return (
         <Card
           key={i}
-          id={item[1].id}
-          name={item[1].name['name-CNzh']}
+          id={item[0]}
+          name={item[1]['name-CNzh']}
           price={item[1].price}
-          time={item[1].availability.time}
-          month={item[1].availability[region]}
+          time={item[1].time}
+          month={item[1][region]}
           region={region}
           category={category}
-          location={item[1].availability.location}
+          location={item[1].location}
           shadow={item[1].shadow}
           />
           );
@@ -28,11 +28,10 @@ const CardList = ({ items,region,category}) => {
         return (
           <Card
             key={i}
-            id={item[1].id}
-            name={item[1].name['name-CNzh']}
+            id={item[0]}
+            name={item[1]['name-CNzh']}
             birthday={item[1].birthday}
             category={category}
-            gender={item[1].gender}
             personality={item[1].personality}
             species={item[1].species}/>
           )
@@ -42,15 +41,13 @@ const CardList = ({ items,region,category}) => {
 else if (category === 'furnitures') {
   return (
     items.map((item, i) => {
-    const imageNames = item[1].map(variant=>variant['file-name'])
-
     return (
       <Card
       key={i}
-      name={item[1][0].name['name-CNzh']}
-      buyPrice={item[1][0]['buy-price']}
+      name={item[1]['name-CNzh']}
+      buyPrice={item[1]['price']}
       category={category}
-      imageNames={imageNames}/> // 家具有不同颜色
+      imageNames={item[0]}/> 
       )
     })
 );

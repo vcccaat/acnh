@@ -55,7 +55,7 @@ class Month extends React.Component {
 		const month = i + beginWith; 
 		const element = 
 			<button key={month} type="button" className={this.state.clicked===month?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.handleClick(month); this.props.setMonth(month);}}>{month}月</button>
+			onClick={()=>{this.onClickChange(month)}}>{month}月</button>
 			
 		return element
 	})
@@ -91,7 +91,7 @@ class Month extends React.Component {
  	render() {
 	return(
 		<form>
-		类别  <div className="btn-group" role="group">
+		<div className="btn-group" role="group">
 			<button type="button" className={this.state.clicked===1?'btn btn-info active responsive':'btn btn-info responsive'}
 			onClick={()=>{this.handleClick(1); this.props.setCategory('fish');}}>鱼类</button>
 			<button type="button" className={this.state.clicked===2?'btn btn-info active responsive':'btn btn-info responsive'}
@@ -100,6 +100,8 @@ class Month extends React.Component {
 			onClick={()=>{this.handleClick(3); this.props.setCategory('furnitures');}}>家具类</button>
 			<button type="button" className={this.state.clicked===4?'btn btn-info active responsive':'btn btn-info responsive'}
 			onClick={()=>{this.handleClick(4); this.props.setCategory('villagers');}}>居民类</button>
+			<button type="button" className={this.state.clicked===5?'btn btn-info active responsive':'btn btn-info responsive'}
+			onClick={()=>{this.handleClick(5); this.props.setCategory('flowers');}}>杂交花攻略</button>
 		</div>
 		</form>
 		);
@@ -122,8 +124,6 @@ class Month extends React.Component {
  	render() { 
 	return (
 		<div className="btn-group" role="group">
-			<button type="button" className={this.state.clicked===1?'btn btn-sm btn-secondary active responsive':'btn btn-sm btn-secondary responsive'}
-			onClick={()=>{this.handleClick(1);this.props.setRank(1);}}>图鉴顺序</button>
 			<button type="button" className={this.state.clicked===2?'btn btn-sm btn-secondary active responsive':'btn btn-sm btn-secondary responsive'}
 			onClick={()=>{this.handleClick(2);this.props.setRank(2);}}>价格从高到低</button>
 			<button type="button" className={this.state.clicked===3?'btn btn-sm btn-secondary active responsive':'btn btn-sm btn-secondary responsive'}

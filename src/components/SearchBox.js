@@ -3,11 +3,13 @@ import React from 'react';
 const SearchBox = ({ searchfield, searchChange }) => {
 	return (
 		<form>
-			名称  <input
-				className='w-50 searchbar'
+			<i class="fa fa-search fa-lg"></i>  
+			<input
+				className='searchbar'
 				type='search'
-				placeholder='Search here'
+				placeholder='  输入名称搜索'
 				onChange={searchChange}
+				value={searchfield}
 			/>
 		</form>	
 	);
