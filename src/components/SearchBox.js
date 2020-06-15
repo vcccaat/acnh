@@ -7,7 +7,7 @@ const SearchBox = ({ searchfield, searchChange }) => {
 			<input
 				className='searchbar'
 				type='search'
-				placeholder='  输入名称搜索'
+				placeholder=' 输入名称搜索'
 				onChange={searchChange}
 				value={searchfield}
 			/>

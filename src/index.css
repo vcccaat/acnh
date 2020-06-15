@@ -6,7 +6,7 @@ html, body {
 
 body::after {
   content: "";
-  background:  url("./assets/bg.jpg") no-repeat center center;
+  background:  url("./assets/bg.png") no-repeat center center;
   display: block;
   position: fixed;
   top: 0;

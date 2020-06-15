@@ -5,11 +5,13 @@ import {Region, Month, Category, FilterPrice} from '../components/Filter';
 import {FishShadowBtn,FishLocationBtn} from '../components/Filter';
 import ScrollButton from '../components/ScrollButton';
 import './App.css';
-import fish from '../data/fish.json'
-import bugs from '../data/bugs.json'
-import villagers from '../data/villagers.json'
-import furnitures from '../data/furnitures.json'
 import Flowers from '../components/Flowers'
+
+const urls=[process.env.PUBLIC_URL+'/data/fish.json',
+    process.env.PUBLIC_URL+'/data/bugs.json',
+    process.env.PUBLIC_URL+'/data/villagers.json',
+    process.env.PUBLIC_URL+'/data/furnitures.json',
+    ]
 
 class App extends Component {
   constructor() {
@@ -35,20 +37,19 @@ class App extends Component {
   }
 
 
-  componentDidMount() {
-    this.demoAsyncCall().then(() => this.setState({ 
-      items:{
-        fish: Object.entries(fish), 
-        bugs: Object.entries(bugs),
-        villagers:Object.entries(villagers),
-        furnitures:Object.entries(furnitures)
-      },
-      isLoading: false}))
+ async componentDidMount() {
+  const [fish,bugs,villagers,furnitures] = await Promise.all(urls.map(url=>
+  fetch(url).then(resp => resp.json())))
+  this.setState({ 
+  items:{
+    fish: Object.entries(fish), 
+    bugs: Object.entries(bugs),
+    villagers:Object.entries(villagers),
+    furnitures:Object.entries(furnitures)
+  },
+  isLoading: false})
   }
 
-  demoAsyncCall = () => {
-    return new Promise((resolve) => setTimeout(() => resolve(), 1500));
-  }
 
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value })
