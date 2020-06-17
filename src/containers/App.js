@@ -40,12 +40,12 @@ class App extends Component {
  async componentDidMount() {
   const [fish,bugs,villagers,furnitures] = await Promise.all(urls.map(url=>
   fetch(url).then(resp => resp.json())))
-  this.setState({ 
+  await this.setState({ 
   items:{
     fish: Object.entries(fish), 
     bugs: Object.entries(bugs),
-    villagers:Object.entries(villagers),
-    furnitures:Object.entries(furnitures)
+    villagers: Object.entries(villagers),
+    furnitures: Object.entries(furnitures)
   },
   isLoading: false})
   }

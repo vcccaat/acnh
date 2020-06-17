@@ -137,7 +137,8 @@ img {
   and (-webkit-min-device-pixel-ratio: 2) {
   	.container {
   		display: grid; 
-		grid-template-columns: repeat(3,1fr);
+		grid-template-columns: repeat(4,1fr);
+		grid-gap: 10px; 
 
   	}
 	.searchbar {
@@ -172,5 +173,8 @@ img {
 	.flowerPic{
 		width: 310px;
 	}
+/*	.item-card{
+		width: 80%;
+	}*/
 }
 
