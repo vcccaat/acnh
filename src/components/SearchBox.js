@@ -1,13 +1,15 @@
 import React from 'react';
+import Translate from 'react-translate-component';
 
 const SearchBox = ({ searchfield, searchChange }) => {
 	return (
 		<form>
 			<i class="fa fa-search fa-lg"></i>  
-			<input
+			<Translate 
+				component='input'
 				className='searchbar'
 				type='search'
-				placeholder=' 输入名称搜索'
+				attributes={{placeholder:'placeholder'}}
 				onChange={searchChange}
 				value={searchfield}
 			/>

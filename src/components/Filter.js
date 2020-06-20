@@ -18,12 +18,14 @@ import Translate from 'react-translate-component';
 	render() {
 		return(
 		<form>
-		地区  <div className="btn-group" role="group">
+		<Translate content="location" />
+		 <div className="btn-group" role="group">
 			<button type="button" id="south" className={this.state.clicked===1?'btn btn-info active responsive':'btn btn-info responsive'}
 			onClick={()=>{this.handleClick(1); this.props.setRegion('month-southern');}
-			}>南半球</button>
+			}><Translate content="south" /></button>
 			<button type="button" id="north" className={this.state.clicked===2?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.handleClick(2); this.props.setRegion('month-northern');}}>北半球</button>
+			onClick={()=>{this.handleClick(2); this.props.setRegion('month-northern');}}>
+			<Translate content="north" /></button>
 		</div>
 		</form>
 		);
@@ -56,7 +58,8 @@ class Month extends React.Component {
 		const month = i + beginWith; 
 		const element = 
 			<button key={month} type="button" className={this.state.clicked===month?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange(month)}}>{month}月</button>
+			onClick={()=>{this.onClickChange(month)}}>{month}
+			<Translate content="month" /></button>
 			
 		return element
 	})
@@ -69,6 +72,7 @@ class Month extends React.Component {
  		const button2 = this.makeButtonGroup(7)
 		return (
 			<div className="month-filter">
+			<Translate content="monthPre" />
 			{button1} {button2}
 			</div>
 		);
@@ -94,15 +98,20 @@ class Month extends React.Component {
 		<form>
 		<div className="btn-group" role="group">
 			<button type="button" className={this.state.clicked===1?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.handleClick(1); this.props.setCategory('fish');}}>鱼类</button>
+			onClick={()=>{this.handleClick(1); this.props.setCategory('fish');}}>
+			<Translate content="category.fish" /></button>
 			<button type="button" className={this.state.clicked===2?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.handleClick(2); this.props.setCategory('bugs');}}>昆虫类</button>
+			onClick={()=>{this.handleClick(2); this.props.setCategory('bugs');}}>
+			<Translate content="category.bugs" /></button>
 			<button type="button" className={this.state.clicked===3?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.handleClick(3); this.props.setCategory('furnitures');}}>家具类</button>
+			onClick={()=>{this.handleClick(3); this.props.setCategory('furnitures');}}>
+			<Translate content="category.furnitures" /></button>
 			<button type="button" className={this.state.clicked===4?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.handleClick(4); this.props.setCategory('villagers');}}>居民类</button>
+			onClick={()=>{this.handleClick(4); this.props.setCategory('villagers');}}>
+			<Translate content="category.villagers" /></button>
 			<button type="button" className={this.state.clicked===5?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.handleClick(5); this.props.setCategory('flowers');}}>杂交花攻略</button>
+			onClick={()=>{this.handleClick(5); this.props.setCategory('flowers');}}>
+			<Translate content="category.flowers" /></button>
 		</div>
 		</form>
 		);
@@ -126,9 +135,11 @@ class Month extends React.Component {
 	return (
 		<div className="btn-group" role="group">
 			<button type="button" className={this.state.clicked===2?'btn btn-sm btn-secondary active responsive':'btn btn-sm btn-secondary responsive'}
-			onClick={()=>{this.handleClick(2);this.props.setRank(2);}}>价格从高到低</button>
+			onClick={()=>{this.handleClick(2);this.props.setRank(2);}}>
+			<Translate content="rank.HightoLow" /></button>
 			<button type="button" className={this.state.clicked===3?'btn btn-sm btn-secondary active responsive':'btn btn-sm btn-secondary responsive'}
-			onClick={()=>{this.handleClick(3); this.props.setRank(3);}}>价格从低到高</button>
+			onClick={()=>{this.handleClick(3); this.props.setRank(3);}}>
+			<Translate content="rank.LowtoHigh" /></button>
 		</div>	
 		)
 }
@@ -158,19 +169,26 @@ class Month extends React.Component {
  	render() { 
 	return (
 		<form >
-		鱼影 <div className="btn-group" role="group">
+		<Translate content="fishShadow" />
+		<div className="btn-group" role="group">
 			<button type="button" className={this.state.clicked==='特小'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('特小')}}>特小</button>
+			onClick={()=>{this.onClickChange('特小')}}>
+			<Translate content="fishShadows.Smallest" /></button>
 			<button type="button" className={this.state.clicked==='较小'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('较小')}}>较小</button>
+			onClick={()=>{this.onClickChange('较小')}}>
+			<Translate content="fishShadows.Small" /></button>
 			<button type="button" className={this.state.clicked==='中偏小'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('中偏小')}}>中偏小</button>
+			onClick={()=>{this.onClickChange('中偏小')}}>
+			<Translate content="fishShadows.Medium" /></button>
 			<button type="button" className={this.state.clicked==='中偏大'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('中偏大')}}>中偏大</button>
+			onClick={()=>{this.onClickChange('中偏大')}}>
+			<Translate content="fishShadows.Large" /></button>
 			<button type="button" className={this.state.clicked==='较大'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('较大')}}>较大</button>
+			onClick={()=>{this.onClickChange('较大')}}>
+			<Translate content="fishShadows.Larger" /></button>
 			<button type="button" className={this.state.clicked==='特大'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('特大')}}>特大</button>
+			onClick={()=>{this.onClickChange('特大')}}>
+			<Translate content="fishShadows.Largest" /></button>
 		</div>	
 		</form>
 
@@ -203,19 +221,26 @@ class Month extends React.Component {
  	render() { 
 	return (
 		<form>
-		地点 <div className="btn-group" role="group">
+		<Translate content="fishLocation" />
+		<div className="btn-group" role="group">
 			<button type="button" className={this.state.clicked==='河流'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('河流');}}>河流</button>
+			onClick={()=>{this.onClickChange('河流');}}>
+			<Translate content="fishLocations.river" /></button>
 			<button type="button" className={this.state.clicked==='大海'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('大海');}}>大海</button>
+			onClick={()=>{this.onClickChange('大海');}}>
+			<Translate content="fishLocations.sea" /></button>
 			<button type="button" className={this.state.clicked==='池塘'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('池塘');}}>池塘</button>
+			onClick={()=>{this.onClickChange('池塘');}}>
+			<Translate content="fishLocations.pond" /></button>
 			<button type="button" className={this.state.clicked==='悬崖'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('悬崖');}}>悬崖</button>
+			onClick={()=>{this.onClickChange('悬崖');}}>
+			<Translate content="fishLocations.clifftop" /></button>
 			<button type="button" className={this.state.clicked==='码头'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('码头');}}>码头</button>
+			onClick={()=>{this.onClickChange('码头');}}>
+			<Translate content="fishLocations.pier" /></button>
 			<button type="button" className={this.state.clicked==='入海口'?'btn btn-info active responsive':'btn btn-info responsive'}
-			onClick={()=>{this.onClickChange('入海口');}}>入海口</button>
+			onClick={()=>{this.onClickChange('入海口');}}>
+			<Translate content="fishLocations.riverMouth" /></button>
 		</div>	
 		</form>
 	

@@ -7,13 +7,14 @@ import ScrollButton from '../components/ScrollButton';
 import './App.css';
 import Flowers from '../components/Flowers';
 import counterpart from 'counterpart';
+import eng from '../lang/eng'
+import chi from '../lang/chi'
 
 
-counterpart.registerTranslations('en',{
-  south: 'South'
-  north: 'North'
-})
-counterpart.setLocale('en');
+counterpart.registerTranslations('en',eng)
+counterpart.registerTranslations('chi',chi)
+counterpart.setLocale('chi')
+
 
 const urls=[process.env.PUBLIC_URL+'/data/fish.json',
     process.env.PUBLIC_URL+'/data/bugs.json',
@@ -40,6 +41,7 @@ class App extends Component {
         location:''
       },
       rank: '',  
+      language: 'chi',
       isLoading: true
     }
   }
@@ -105,7 +107,10 @@ class App extends Component {
 
     if (searchfield !== ''){
       filteredItem = filteredItem.filter(a =>{
-          return a[1]['name-CNzh'].includes(searchfield);
+          if (this.state.language === 'chi'){
+          return a[1]['name-CNzh'].includes(searchfield);}
+          else {
+            return a[1]['name-EUen'].includes(searchfield.toLowerCase());}
       })
     }
 
@@ -175,16 +180,19 @@ class App extends Component {
     
     const cardContent =  <div className='container'>       
                 <CardList items={item} region={this.state.region} 
-                          category={this.state.category} />
+                          category={this.state.category}
+                          language={this.state.language} />
                           </div>
-    // const languageSelect = <div className="btn-group " role="group">
-    //                         <button className="btn btn-light btn-sm data-reload"
-    //                         onClick={()=>{window.location.href='#eng'; location.reload() }}>
-    //                         English </button> 
-    //                         <button className="btn btn-light btn-sm data-reload"
-    //                         onClick={()=>{window.location.href='#chi'; location.reload()}}>
-    //                         中文 </button>
-    //                         </div>
+    const languageSelect = <div className="btn-group " role="group">
+                            <button className="btn btn-light btn-sm"
+                            onClick={()=>{counterpart.setLocale('en'); 
+                            this.setState({language:'en'}) }}>
+                            English </button> 
+                            <button className="btn btn-light btn-sm"
+                            onClick={()=>{counterpart.setLocale('chi');
+                            this.setState({language:'chi'})}}>
+                            中文 </button>
+                            </div>
 
     return  (
     this.state.isLoading ?
@@ -194,11 +202,7 @@ class App extends Component {
       </div>
       : 
         <div className='tc'>
-        <div className="tr">
-        <a href="#eng" data-reload> English </a> | 
-        <a href="#chi" data-reload> 中文 </a>
-        </div>
-        {/*<div className="tr">{languageSelect}</div>*/}
+        {<div className="tr">{languageSelect}</div>}
           <h1 className='f1 mt-3'>Animal Crossing</h1>
             <div className="filter-row">
               <Category setCategory={this.setCategory}/>                        
@@ -218,7 +222,7 @@ class App extends Component {
             <a href="https://github.com/vcccaat/acnh"> GitHub </a> | <a href="https://weibo.com/u/6376162094?is_all=1">Weibo</a></span>
             <br/>
             <span>其他推荐资源：<a href="https://wiki.biligame.com/dongsen/%E9%A6%96%E9%A1%B5">动物森友会WIKI</a> | 
-            <a href="https://animalcrossingworld.com/guides/new-horizons/">Animal Crossing World</a> <a href="https://villagerdb.com/">villagerdb</a></span>
+            <a href="https://animalcrossingworld.com/guides/new-horizons/"> Animal Crossing World</a> | <a href="https://villagerdb.com/">villagerdb</a></span>
             </div>
 
             <ScrollButton scrollStepInPx="100" delayInMs="10.66"/>

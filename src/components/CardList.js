@@ -2,23 +2,27 @@ import React from 'react';
 import Card from './Card';
 import '../containers/App.css';
 
-const CardList = ({ items,region,category}) => {
+
+const CardList = ({ items,region,category,language}) => {
+  
   if (category === 'fish' || category === 'bugs' ){
     return(
       items.map((item, i) => {
       return (
+        <div style={{textTransform: 'capitalize'}}>
         <Card
           key={i}
           id={item[0]}
-          name={item[1]['name-CNzh']}
+          name={language==='en'?item[1]['name-EUen']:item[1]['name-CNzh']}
           price={item[1].price}
           time={item[1].time}
           month={item[1][region]}
           region={region}
           category={category}
-          location={item[1].location}
-          shadow={item[1].shadow}
+          location={language==='en'?item[1]['location_eng']:item[1]['location']}
+          shadow={language==='en'?item[1]['shadow_eng']:item[1]['shadow']}
           />
+          </div>
           );
     }))   
   }
@@ -26,14 +30,16 @@ const CardList = ({ items,region,category}) => {
     return (
         items.map((item, i) => {
         return (
+          <div style={{textTransform: 'capitalize'}}>
           <Card
             key={i}
             id={item[0]}
-            name={item[1]['name-CNzh']}
+            name={language==='en'?item[1]['name-EUen']:item[1]['name-CNzh']}
             birthday={item[1].birthday}
             category={category}
-            personality={item[1].personality}
-            species={item[1].species}/>
+            personality={language==='en'?item[1]['personality_eng']:item[1]['personality']}
+            species={language==='en'?item[1]['species_eng']:item[1]['species']}/>
+            </div>
           )
           })
     );
@@ -42,12 +48,14 @@ else if (category === 'furnitures') {
   return (
     items.map((item, i) => {
     return (
+      <div style={{textTransform: 'capitalize'}}>
       <Card
       key={i}
-      name={item[1]['name-CNzh']}
+      name={language==='en'?item[1]['name-EUen']:item[1]['name-CNzh']}
       buyPrice={item[1]['price']}
       category={category}
       imageNames={item[0]}/> 
+      </div>
       )
     })
 );
