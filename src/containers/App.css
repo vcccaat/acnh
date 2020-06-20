@@ -16,7 +16,12 @@ p {
 	font-family: 'Helvetica Neue';
 	line-height: 25px;
 }
- 
+
+a:link{color:#0ccac4;}   
+a:visited {color:#0ccac4;}  
+a:hover {color:#0ccac4;} 
+a:active {color:#0ccac4;} 
+
 img {
 	width: 100%;
 }
@@ -35,7 +40,7 @@ img {
   background-color: grey;
   color: white;
   margin-top: 200px;
-  height: 30px;
+  height: 50px;
 }
 
 .scroll {
@@ -173,8 +178,5 @@ img {
 	.flowerPic{
 		width: 310px;
 	}
-/*	.item-card{
-		width: 80%;
-	}*/
 }
 

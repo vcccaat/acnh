@@ -5,7 +5,15 @@ import {Region, Month, Category, FilterPrice} from '../components/Filter';
 import {FishShadowBtn,FishLocationBtn} from '../components/Filter';
 import ScrollButton from '../components/ScrollButton';
 import './App.css';
-import Flowers from '../components/Flowers'
+import Flowers from '../components/Flowers';
+import counterpart from 'counterpart';
+
+
+counterpart.registerTranslations('en',{
+  south: 'South'
+  north: 'North'
+})
+counterpart.setLocale('en');
 
 const urls=[process.env.PUBLIC_URL+'/data/fish.json',
     process.env.PUBLIC_URL+'/data/bugs.json',
@@ -169,7 +177,14 @@ class App extends Component {
                 <CardList items={item} region={this.state.region} 
                           category={this.state.category} />
                           </div>
-             
+    // const languageSelect = <div className="btn-group " role="group">
+    //                         <button className="btn btn-light btn-sm data-reload"
+    //                         onClick={()=>{window.location.href='#eng'; location.reload() }}>
+    //                         English </button> 
+    //                         <button className="btn btn-light btn-sm data-reload"
+    //                         onClick={()=>{window.location.href='#chi'; location.reload()}}>
+    //                         中文 </button>
+    //                         </div>
 
     return  (
     this.state.isLoading ?
@@ -179,6 +194,11 @@ class App extends Component {
       </div>
       : 
         <div className='tc'>
+        <div className="tr">
+        <a href="#eng" data-reload> English </a> | 
+        <a href="#chi" data-reload> 中文 </a>
+        </div>
+        {/*<div className="tr">{languageSelect}</div>*/}
           <h1 className='f1 mt-3'>Animal Crossing</h1>
             <div className="filter-row">
               <Category setCategory={this.setCategory}/>                        
@@ -194,13 +214,17 @@ class App extends Component {
            <Flowers/>}
           
             <div className="footer">          
-            <span>本网站及其内容仅可用于非商业性的个人用途，侵权请联系
-            <a href="https://github.com/vcccaat/acnh"> GitHub </a></span>
+            <span>本网站及其内容基于<a href="https://www.nintendo.com/">任天堂</a>游戏仅用于非商业性的个人用途，侵权请联系
+            <a href="https://github.com/vcccaat/acnh"> GitHub </a> | <a href="https://weibo.com/u/6376162094?is_all=1">Weibo</a></span>
+            <br/>
+            <span>其他推荐资源：<a href="https://wiki.biligame.com/dongsen/%E9%A6%96%E9%A1%B5">动物森友会WIKI</a> | 
+            <a href="https://animalcrossingworld.com/guides/new-horizons/">Animal Crossing World</a> <a href="https://villagerdb.com/">villagerdb</a></span>
             </div>
 
             <ScrollButton scrollStepInPx="100" delayInMs="10.66"/>
          
         </div>
+
       );
   }
 }

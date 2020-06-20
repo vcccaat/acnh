@@ -1,4 +1,5 @@
 import React from 'react';
+import Translate from 'react-translate-component';
 
  class Region extends React.Component {
  	constructor(props){
@@ -18,10 +19,10 @@ import React from 'react';
 		return(
 		<form>
 		地区  <div className="btn-group" role="group">
-			<button type="button" className={this.state.clicked===1?'btn btn-info active responsive':'btn btn-info responsive'}
+			<button type="button" id="south" className={this.state.clicked===1?'btn btn-info active responsive':'btn btn-info responsive'}
 			onClick={()=>{this.handleClick(1); this.props.setRegion('month-southern');}
 			}>南半球</button>
-			<button type="button" className={this.state.clicked===2?'btn btn-info active responsive':'btn btn-info responsive'}
+			<button type="button" id="north" className={this.state.clicked===2?'btn btn-info active responsive':'btn btn-info responsive'}
 			onClick={()=>{this.handleClick(2); this.props.setRegion('month-northern');}}>北半球</button>
 		</div>
 		</form>

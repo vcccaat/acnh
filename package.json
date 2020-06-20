@@ -5,11 +5,14 @@
   "version": "1.3.0",
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "react": "^16.12.0",
+    "counterpart": "^0.18.6",
+    "react": "^16.13.1",
     "react-dom": "^16.12.0",
+    "react-interpolate-component": "^0.12.0",
     "react-load-image": "^0.1.7",
     "react-scripts": "^3.4.0",
     "react-spinners": "^0.8.3",
+    "react-translate-component": "^0.15.1",
     "tachyons": "^4.11.1"
   },
   "scripts": {
