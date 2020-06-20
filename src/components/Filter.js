@@ -17,7 +17,7 @@ import Translate from 'react-translate-component';
 
 	render() {
 		return(
-		<form>
+		<form >
 		<Translate content="location" />
 		 <div className="btn-group" role="group">
 			<button type="button" id="south" className={this.state.clicked===1?'btn btn-info active responsive':'btn btn-info responsive'}

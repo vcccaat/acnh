@@ -89,6 +89,7 @@ img {
 	margin-bottom: 20px;
 }
 
+
 .item-card {
 	box-shadow: 6px 8px 6px -6px rgba(0, 0, 0, 0.4);
 	border: 3px solid ;
@@ -97,6 +98,7 @@ img {
 	transition: all 1s; 
 	display: block;
 	background-color: rgba(16,154,167,0.1);
+	height: 100%;
 }
 
 .item-card:hover {
@@ -134,6 +136,10 @@ img {
 	/*box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.7);*/
 }
 
+.btn {
+	padding: .375rem .75rem;
+}
+
 
 
 @media only screen 
@@ -142,18 +148,21 @@ img {
   and (-webkit-min-device-pixel-ratio: 2) {
   	.container {
   		display: grid; 
-		grid-template-columns: repeat(4,1fr);
+		grid-template-columns: repeat(3,1fr);
 		grid-gap: 10px; 
 
   	}
 	.searchbar {
-		width: 310px;
+		width: 220px;
 		height: 36px;
 	}
   	p {
   		font-size: 12px;
   		margin-bottom: 0px;
   		line-height: 20px;
+  	}
+  	span{
+  		font-size: 12px;
   	}
   	h4.name-text {
   		font-size: 12px;
@@ -166,11 +175,12 @@ img {
 	line-height: 100%;
 	}
 	div.month-filter {
-	line-height: 10px;
+	line-height: 5px;
 	}
 	button.responsive {
 	font-size: 12px;
 	margin-bottom: 8px;
+	padding: 0.3rem 0.4rem;
 	}
 	.footer span {
 		font-size: 8px;

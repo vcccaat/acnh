@@ -11,7 +11,7 @@ export default {
 	},
 	month: '月',
 	monthPre: '',
-	fishShadow: '鱼影',
+	fishShadow: '鱼影 ',
 	fishShadows: {
 		Smallest: '特小',
 		Small: '较小',
@@ -20,7 +20,7 @@ export default {
 		Larger: '较大',
 		Largest: '特大',
 	},
-	fishLocation: '出现地点',
+	fishLocation: '地点 ',
 	fishLocations : {
 		river: '河流',
 		sea: '大海',

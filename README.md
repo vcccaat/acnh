@@ -1,7 +1,6 @@
 
-# NS动物森友会简单网页版图鉴
-Animal Crossing: New Horizons React APP
-A simple website to display, sort and search Animal Crossing fish, bugs, furnitures and villagers information.
+Animal Crossing: New Horizons Database
+This website collect all types of fish, bugs, furnitures, villagers, and hybrid flowers tricks.  Allow keyword searching and filtering fish or bugs based on location, month, and size, and rank price from high to low and vice versa. Currently versions for English and Chinese are available!
 Website: https://nsds.info
 
 To run the project:

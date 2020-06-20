@@ -197,7 +197,7 @@ class App extends Component {
     return  (
     this.state.isLoading ?
       <div className='load-box'>
-        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+        <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
         <h1>Loading</h1>
       </div>
       : 

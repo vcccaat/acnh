@@ -4,7 +4,7 @@ import Translate from 'react-translate-component';
 const SearchBox = ({ searchfield, searchChange }) => {
 	return (
 		<form>
-			<i class="fa fa-search fa-lg"></i>  
+			<i className="fa fa-search fa-lg"></i>  
 			<Translate 
 				component='input'
 				className='searchbar'
