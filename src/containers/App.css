@@ -3,6 +3,7 @@
 font-family: 'SEGA LOGO FONT';
 font-style: normal;
 font-weight: normal;
+font-display: swap;
 src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
 }
 
@@ -49,7 +50,7 @@ img {
   width: 40px;
   height: 40px;
   position: fixed;
-  bottom: 200px;
+  bottom: 100px;
   left: 5px;
   border-radius: 5px;
   border: none;

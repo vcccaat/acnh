@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
 
 class ScrollButton extends React.Component {
   constructor() {
@@ -23,7 +25,7 @@ class ScrollButton extends React.Component {
   render () {
       return <button title='Back to top' className='scroll' 
                onClick={ () => { this.scrollToTop(); }}>
-               <i className="arrow-up fa fa-angle-double-up"></i>
+               <FontAwesomeIcon icon={faAngleDoubleUp} />
               </button>;
    }
 }

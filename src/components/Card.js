@@ -46,7 +46,7 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
       return (
       <div className="item-card">
         <ImageLoader
-          src={process.env.PUBLIC_URL+`/images/${item_id}${category}.png`}>
+          src={process.env.PUBLIC_URL+`/images/${item_id}${category}.jpg`}>
           <img alt="icon"/>
           <div>Error!</div>
           <BeatLoader color={"#50E3C2"}/>

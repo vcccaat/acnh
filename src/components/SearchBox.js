@@ -1,10 +1,12 @@
 import React from 'react';
 import Translate from 'react-translate-component';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const SearchBox = ({ searchfield, searchChange }) => {
 	return (
 		<form>
-			<i className="fa fa-search fa-lg"></i>  
+			<FontAwesomeIcon icon={faSearch} />
 			<Translate 
 				component='input'
 				className='searchbar'

@@ -4,6 +4,8 @@
   "homepage": ".",
   "version": "1.3.0",
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "bootstrap": "^4.5.0",
     "counterpart": "^0.18.6",
     "react": "^16.13.1",
