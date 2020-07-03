@@ -141,6 +141,10 @@ img {
 	padding: .375rem .75rem;
 }
 
+.smaller-img{
+	width: 70px;
+	margin: auto;
+}
 
 
 @media only screen 

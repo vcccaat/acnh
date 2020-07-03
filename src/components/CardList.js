@@ -9,7 +9,7 @@ const CardList = ({ items,region,category,language}) => {
     return(
       items.map((item, i) => {
       return (
-        <div style={{textTransform: 'capitalize'}}>
+        <div style={{textTransform: 'capitalize'}}  key={i}>
         <Card
           key={i}
           id={item[0]}
@@ -30,7 +30,7 @@ const CardList = ({ items,region,category,language}) => {
     return (
         items.map((item, i) => {
         return (
-          <div style={{textTransform: 'capitalize'}}>
+          <div style={{textTransform: 'capitalize'}}  key={i}>
           <Card
             key={i}
             id={item[0]}
@@ -48,7 +48,7 @@ else if (category === 'furnitures') {
   return (
     items.map((item, i) => {
     return (
-      <div style={{textTransform: 'capitalize'}}>
+      <div style={{textTransform: 'capitalize'}}  key={i}>
       <Card
       key={i}
       name={language==='en'?item[1]['name-EUen']:item[1]['name-CNzh']}
@@ -59,6 +59,26 @@ else if (category === 'furnitures') {
       )
     })
 );
+}
+else if (category==='deepsea') {
+  return (
+    items.map((item, i) => {
+    return (
+      <div style={{textTransform: 'capitalize'}}  key={i}>
+      <Card
+      key={i}
+      id={item[0]}
+      name={language==='en'?item[1]['name-EUen']:item[1]['name-CNzh']}
+      price={item[1].price}
+      time={item[1].time}
+      month={item[1][region]}
+      region={region}
+      category={category}
+      /> 
+      </div>
+    )
+
+}))
 }
 }
 

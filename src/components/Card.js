@@ -12,24 +12,18 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
   let fishInfo = <br/>
 
 
-  if (category === 'fish' || category === 'bugs' ){
-      if (category==="fish") {
-          fishInfo = <span> <br/> <Translate content="card.fishShadow"/>: {shadow}<br/> 
-           <Translate content="card.fishLocation"/> : {location}<br/></span>
-       }    
-    let month_display = ''
-    if (region !== '') 
-      {month_display = <span><Translate content="card.month"/>
-       : {month?month:<Translate content="card.common"/> } </span>}
-    
+  if (category === 'fish' ){
+    fishInfo = <span> <br/> <Translate content="card.fishShadow"/>: {shadow}<br/> 
+     <Translate content="card.fishLocation"/> : {location}<br/></span>
+      
     info = <p><Translate content="card.price"/> : {price}  <br/> 
             <Translate content="card.time"/> : {time_display} 
-            {fishInfo}  {month_display}</p> 
-
+            {fishInfo}  
+            </p> 
     return (
     	<div className="item-card">
           <ImageLoader
-          src={process.env.PUBLIC_URL+`/images/${item_id}${category}.png`}>
+          src={require(`../images/${item_id}${category}.png`)}>
           <img alt="icon"/>
           <div>Error!</div>
           <BeatLoader color={"#50E3C2"}/>
@@ -38,6 +32,26 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
           {info}
       </div>
     )
+
+    }
+    else if (category==='bugs'){
+      info = <p><Translate content="card.price"/> : {price}  <br/> 
+        <Translate content="card.time"/> : {time_display}   
+        </p> 
+      return (
+      <div className="item-card">
+      <div className="smaller-img">
+          <ImageLoader
+          src={require(`../images/${item_id}${category}.png`)}>
+          <img alt="icon"/>
+          <div>Error!</div>
+          <BeatLoader color={"#50E3C2"}/>
+        </ImageLoader>
+        </div>
+          <h4 className="name-text">{name}</h4>
+          {info}
+      </div>
+      )
     }
     else if  (category === 'villagers') {
       info = <p><Translate content="card.species"/>: {species} <br/> 
@@ -46,7 +60,7 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
       return (
       <div className="item-card">
         <ImageLoader
-          src={process.env.PUBLIC_URL+`/images/${item_id}${category}.jpg`}>
+          src={require(`../images/${item_id}${category}.jpg`)}>
           <img alt="icon"/>
           <div>Error!</div>
           <BeatLoader color={"#50E3C2"}/>
@@ -61,16 +75,37 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
             : {buyPrice===null?<Translate content="card.diy"/>:buyPrice}</p>
       return (
       <div className="item-card">
+      <div className="smaller-img">
         <ImageLoader
-          src={process.env.PUBLIC_URL+`/images/${imageNames}.png`}>
+          src={require(`../images/${imageNames}.png`)}>
           <img alt="icon"/>
           <div>Error!</div>
           <BeatLoader color={"#50E3C2"}/>
         </ImageLoader>
+        </div>
         <h4 className="name-text">{name}</h4>
         {info}
       </div>
       );
+    }
+    else if (category === 'deepsea') {
+    info = <p><Translate content="card.price"/> : {price}  <br/> 
+      <Translate content="card.time"/> : {time_display} 
+      </p> 
+      return (
+      <div className="item-card">
+      <div className="smaller-img">
+        <ImageLoader
+          src={require(`../images/sc_${id}_i.png`)}>
+          <img alt="icon"/>
+          <div>Error!</div>
+          <BeatLoader color={"#50E3C2"}/>
+        </ImageLoader>
+        </div>
+        <h4 className="name-text">{name}</h4>
+        {info}
+      </div>
+      )
     }
 }
 

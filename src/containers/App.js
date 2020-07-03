@@ -20,6 +20,7 @@ const urls=[process.env.PUBLIC_URL+'/data/fish.json',
     process.env.PUBLIC_URL+'/data/bugs.json',
     process.env.PUBLIC_URL+'/data/villagers.json',
     process.env.PUBLIC_URL+'/data/furnitures.json',
+    process.env.PUBLIC_URL+'/data/deepsea.json'
     ]
 
 class App extends Component {
@@ -30,12 +31,13 @@ class App extends Component {
         fish: [],
         bugs: [],
         villagers: [],
-        furnitures: []
+        furnitures: [],
+        deepsea: [],
       },
       searchfield: '',
       region: '',
       month: '',
-      category: 'fish',
+      category: 'deepsea',
       fishInfo:{
         shadow:'',
         location:''
@@ -48,14 +50,15 @@ class App extends Component {
 
 
  async componentDidMount() {
-  const [fish,bugs,villagers,furnitures] = await Promise.all(urls.map(url=>
+  const [fish,bugs,villagers,furnitures,deepsea] = await Promise.all(urls.map(url=>
   fetch(url).then(resp => resp.json())))
   await this.setState({ 
   items:{
     fish: Object.entries(fish), 
     bugs: Object.entries(bugs),
     villagers: Object.entries(villagers),
-    furnitures: Object.entries(furnitures)
+    furnitures: Object.entries(furnitures),
+    deepsea: Object.entries(deepsea),
   },
   isLoading: false})
   }
@@ -160,7 +163,8 @@ class App extends Component {
     let item = items[this.state.category];
     item = this.filterItem(item,searchfield);
 
-    const regionMonthFilter = this.state.category==='fish'||this.state.category==='bugs'?
+    const regionMonthFilter = this.state.category==='fish'||this.state.category==='bugs'
+                              ||this.state.category==='deepsea'?
                         <div>
                          <Region setRegion={this.setRegion}/>
                         <Month setMonth={this.setMonth}/> </div>:''
@@ -170,7 +174,7 @@ class App extends Component {
                <FishLocationBtn setFishLocation={this.setFishLocation}/>
                </div>: ''
     const setRank = this.state.category==='fish'||this.state.category==='bugs'
-                    ||this.state.category==='furnitures'?
+                    ||this.state.category==='furnitures'||this.state.category==='deepsea'?
                     <div className="filter">
                     <FilterPrice setRank={this.setRank}/>
                     </div>:''
@@ -193,14 +197,12 @@ class App extends Component {
                             this.setState({language:'chi'})}}>
                             中文 </button>
                             </div>
-
     return  (
-    this.state.isLoading ?
-      <div className='load-box'>
-        <i className="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-        <h1>Loading</h1>
-      </div>
-      : 
+    // this.state.isLoading ?
+    //   <div className='load-box'>
+    //      <h1>Loading</h1>
+    //   </div>
+    //   : 
         <div className='tc'>
         {<div className="tr">{languageSelect}</div>}
           <h1 className='f1 mt-3'>Animal Crossing</h1>
@@ -219,10 +221,11 @@ class App extends Component {
           
             <div className="footer">          
             <span>本网站及其内容基于<a href="https://www.nintendo.com/">任天堂</a>游戏仅用于非商业性的个人用途，侵权请联系
-            <a href="https://github.com/vcccaat/acnh"> GitHub </a> | <a href="https://weibo.com/u/6376162094?is_all=1">Weibo</a></span>
+            <a href="https://github.com/vcccaat/acnh"> GitHub </a> | <a href="https://weibo.com/u/6376162094?is_all=1">Weibo</a> 
+            | <a href="https://vcccaat.github.io/"> Personal Web </a></span>
             <br/>
-            <span>其他推荐资源：<a href="https://wiki.biligame.com/dongsen/%E9%A6%96%E9%A1%B5">动物森友会WIKI</a> | 
-            <a href="https://animalcrossingworld.com/guides/new-horizons/"> Animal Crossing World</a> | <a href="https://villagerdb.com/">villagerdb</a></span>
+            <span>Sources：<a href="https://wiki.biligame.com/dongsen/%E9%A6%96%E9%A1%B5">动物森友会WIKI</a> | 
+            <a href="https://animalcrossingworld.com/guides/new-horizons/"> Animal Crossing World</a> | <a href="https://animalcrossing.fandom.com/wiki/Animal_Crossing_Wiki">Fandom</a></span>
             </div>
 
             <ScrollButton scrollStepInPx="100" delayInMs="10.66"/>

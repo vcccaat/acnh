@@ -8,8 +8,7 @@ import BeatLoader from "react-spinners/BeatLoader";
  		return (
  		<div className="flowerPic" >
  		<ImageLoader
-          // src={require(`../assets/images/${i+1}flower.png`)}>
-          src={process.env.PUBLIC_URL+`/images/flower${i+1}.png`}>
+          src={require(`../images/flower${i+1}.png`)}>
           <img alt="flower"/>
           <div>Error!</div>
           <BeatLoader color={"#50E3C2"}/>
