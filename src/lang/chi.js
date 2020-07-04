@@ -8,6 +8,7 @@ export default {
 		furnitures: '家具类',
 		villagers: '居民类',
 		flowers: '杂交花攻略',
+		deepsea: '海洋生物'
 	},
 	month: '月',
 	monthPre: '',
@@ -35,8 +36,8 @@ export default {
 		LowtoHigh: '价格从低到高',
 	},
 	card: {
-		random: "随机",
-		common: "常见",
+		random: "全天",
+		common: "全年",
 		price: "价格",
 		time: '时间',
 		month: '月份',
@@ -46,6 +47,7 @@ export default {
 		species: '种族',
 		personality: '性格',
 		birthday: '生日',
+		deepSeaShadow: '影子'
 		
 	}
 }

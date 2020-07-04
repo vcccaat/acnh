@@ -1,5 +1,7 @@
 import React from 'react';
 import Translate from 'react-translate-component';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar} from "@fortawesome/free-solid-svg-icons";
 
  class Region extends React.Component {
  	constructor(props){
@@ -83,7 +85,7 @@ class Month extends React.Component {
  	constructor(props){
 		super(props)
 		this.state = {
-			clicked: 1,
+			clicked: 6,
 		}
  	}
 
@@ -97,6 +99,9 @@ class Month extends React.Component {
 	return(
 		<form>
 		<div className="btn-group" role="group">
+			<button type="button" className={this.state.clicked===6?'btn btn-info active responsive':'btn btn-info responsive'}
+			onClick={()=>{this.handleClick(6); this.props.setCategory('deepsea');}}>
+			 <FontAwesomeIcon icon={faStar} color={'yellow'} /><Translate content="category.deepsea" /></button>
 			<button type="button" className={this.state.clicked===1?'btn btn-info active responsive':'btn btn-info responsive'}
 			onClick={()=>{this.handleClick(1); this.props.setCategory('fish');}}>
 			<Translate content="category.fish" /></button>

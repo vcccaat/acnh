@@ -4,10 +4,11 @@ export default {
 	north: 'North',
 	category: {
 		fish: 'Fish',
-		bugs: 'Bugs',
-		furnitures: 'Furnitures',
-		villagers: 'Villagers',
-		flowers: 'Hybrid Flowers'
+		bugs: 'Bug',
+		furnitures: 'Furniture',
+		villagers: 'Villager',
+		flowers: 'Flower',
+		deepsea: 'Sea Creature'
 	},
 	month: '',
 	monthPre: 'Month ',
@@ -35,8 +36,8 @@ export default {
 		LowtoHigh: 'Price: Low to High',
 	},
 	card: {
-		random: "Random",
-		common: "Common",
+		random: "whole day",
+		common: "whole year",
 		price: "Price",
 		time: 'Time',
 		month: 'Month',
@@ -46,6 +47,7 @@ export default {
 		species: 'Species',
 		personality: 'Personality',
 		birthday: 'Birthday',
+		deepSeaShadow: 'Shadow'
 
 	}
 }

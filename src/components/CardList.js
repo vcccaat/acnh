@@ -74,6 +74,7 @@ else if (category==='deepsea') {
       month={item[1][region]}
       region={region}
       category={category}
+      deepseashadow={language==='en'?item[1].shadow_eng:item[1].shadow}
       /> 
       </div>
     )

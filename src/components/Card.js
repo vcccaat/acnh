@@ -4,7 +4,7 @@ import ImageLoader from 'react-load-image';
 import BeatLoader from "react-spinners/BeatLoader";
 import Translate from 'react-translate-component';
 
-const Card = ({ name, price, shadow, location, id, time, month, region, category,birthday,buyPrice, imageNames,species,personality}) => {
+const Card = ({ name, price, shadow, deepseashadow, location, id, time, month, region, category,birthday,buyPrice, imageNames,species,personality}) => {
 
   const item_id = id
   const time_display = time?time:<Translate content="card.random" />
@@ -13,12 +13,17 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
 
 
   if (category === 'fish' ){
+      let month_display = ''
+      if (region !== '') 
+      {month_display = <span><Translate content="card.month"/>
+       : {month?month:<Translate content="card.common"/> } </span>}
+
     fishInfo = <span> <br/> <Translate content="card.fishShadow"/>: {shadow}<br/> 
      <Translate content="card.fishLocation"/> : {location}<br/></span>
       
     info = <p><Translate content="card.price"/> : {price}  <br/> 
             <Translate content="card.time"/> : {time_display} 
-            {fishInfo}  
+            {fishInfo}  {month_display}
             </p> 
     return (
     	<div className="item-card">
@@ -35,8 +40,12 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
 
     }
     else if (category==='bugs'){
+      let month_display = ''
+      if (region !== '') 
+      {month_display = <span><Translate content="card.month"/>
+       : {month?month:<Translate content="card.common"/> } </span>}
       info = <p><Translate content="card.price"/> : {price}  <br/> 
-        <Translate content="card.time"/> : {time_display}   
+        <Translate content="card.time"/> : {time_display}    {month_display}
         </p> 
       return (
       <div className="item-card">
@@ -91,6 +100,7 @@ const Card = ({ name, price, shadow, location, id, time, month, region, category
     else if (category === 'deepsea') {
     info = <p><Translate content="card.price"/> : {price}  <br/> 
       <Translate content="card.time"/> : {time_display} 
+     <br/> <Translate content="card.deepSeaShadow"/>: {deepseashadow}
       </p> 
       return (
       <div className="item-card">

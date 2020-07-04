@@ -107,6 +107,8 @@ class App extends Component {
   filterItem = (array,searchfield) => {
     // search filter
     let filteredItem = array
+    let monthArray = [1,2,3,4,5,6,7,8,9,10,11,12]
+    let monthArrayRegion = "month-array-northern"
 
     if (searchfield !== ''){
       filteredItem = filteredItem.filter(a =>{
@@ -130,13 +132,17 @@ class App extends Component {
     }
     if (this.state.rank === 1) {filteredItem = array}
 
+    // region filter
+    if (this.state.region !== ''){
+        monthArrayRegion = this.state.region ===
+        'month-southern'?'month-array-southern':'month-array-northern'
+    }
+
     // month filter
-    if (this.state.month !== '' && this.state.category!=='furnitures' 
+    if (this.state.region !== ''&& this.state.month!=='' && this.state.category!=='furnitures' 
       && this.state.category !== 'villagers'){
       filteredItem = filteredItem.filter(item => {
-        const region = this.state.region===
-        'month-southern'?'month-array-southern':'month-array-northern'
-        const monthArray = item[1][region]
+        monthArray = item[1][monthArrayRegion]
         return monthArray.includes(this.state.month)
       })
     }
@@ -222,7 +228,7 @@ class App extends Component {
             <div className="footer">          
             <span>本网站及其内容基于<a href="https://www.nintendo.com/">任天堂</a>游戏仅用于非商业性的个人用途，侵权请联系
             <a href="https://github.com/vcccaat/acnh"> GitHub </a> | <a href="https://weibo.com/u/6376162094?is_all=1">Weibo</a> 
-            | <a href="https://vcccaat.github.io/"> Personal Web </a></span>
+            </span>
             <br/>
             <span>Sources：<a href="https://wiki.biligame.com/dongsen/%E9%A6%96%E9%A1%B5">动物森友会WIKI</a> | 
             <a href="https://animalcrossingworld.com/guides/new-horizons/"> Animal Crossing World</a> | <a href="https://animalcrossing.fandom.com/wiki/Animal_Crossing_Wiki">Fandom</a></span>
