@@ -1,0 +1,197 @@
+
+@font-face {
+font-family: 'SEGA LOGO FONT';
+font-style: normal;
+font-weight: normal;
+font-display: swap;
+src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
+}
+
+h1 {
+  font-family: 'SEGA LOGO FONT';
+  font-weight: 200;
+  color: #0ccac4;
+}
+
+p {
+	font-family: 'Helvetica Neue';
+	line-height: 25px;
+}
+
+a:link{color:#0ccac4;}   
+a:visited {color:#0ccac4;}  
+a:hover {color:#0ccac4;} 
+a:active {color:#0ccac4;} 
+
+img {
+	width: 100%;
+}
+
+.wrapper {
+	display: inline-block;
+}
+.container {
+	display: grid; 
+	grid-gap: 20px; 
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+}
+
+.footer{
+  display:block;
+  background-color: grey;
+  color: white;
+  margin-top: 200px;
+  height: 50px;
+}
+
+.scroll {
+  opacity: 0.5;
+  background-color: grey;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 100px;
+  left: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.scroll:hover {
+    opacity: 1;
+  }
+
+.arrow-up {
+  color: white;
+  position: absolute;
+  font-size: 2em;
+  top: 50%;
+  left: 50%;
+  margin-top: -18px;
+  margin-left: -10px;
+}
+  
+.searchbar {
+	border: 2px solid rgba(94, 223, 255, 0.4);
+	border-radius: 5px;
+	height: 40px;
+	width: 360px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+
+.fa-search {
+	color: grey;
+}
+
+.filter {
+	display:flex;
+	justify-content: flex-start;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+.item-card {
+	box-shadow: 6px 8px 6px -6px rgba(0, 0, 0, 0.4);
+	border: 3px solid ;
+	border-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	transition: all 1s; 
+	display: block;
+	background-color: rgba(16,154,167,0.1);
+	height: 100%;
+}
+
+.item-card:hover {
+	box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.7);
+}
+
+.filter-row {
+	display: block;
+	justify-content: center;
+	line-height: 50px;
+}
+.load-box {
+	height: 500px;
+	text-align:center;
+	margin-top: 100px;
+}
+
+.fa-spinner{
+	color:#0ccac4;
+}
+
+.active {
+	background-color: rgb(12, 121, 138);
+}
+
+.month-filter{
+	display: block；
+}
+
+.flowerPic{
+	width: 500px;
+	display: block;
+	margin: auto;
+	margin-top: 50px;
+	/*box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.7);*/
+}
+
+.btn {
+	padding: .375rem .75rem;
+}
+
+.smaller-img{
+	width: 70px;
+	margin: auto;
+}
+
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  	.container {
+  		display: grid; 
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 10px; 
+
+  	}
+	.searchbar {
+		width: 220px;
+		height: 36px;
+	}
+  	p {
+  		font-size: 12px;
+  		margin-bottom: 0px;
+  		line-height: 20px;
+  	}
+  	span{
+  		font-size: 12px;
+  	}
+  	h4.name-text {
+  		font-size: 12px;
+  	}
+  	div.filter {
+	margin-left: 15px;
+	}
+	form {
+	font-size: 14px;
+	line-height: 100%;
+	}
+	div.month-filter {
+	line-height: 5px;
+	}
+	button.responsive {
+	font-size: 12px;
+	margin-bottom: 8px;
+	padding: 0.3rem 0.4rem;
+	}
+	.footer span {
+		font-size: 8px;
+	}
+	.flowerPic{
+		width: 310px;
+	}
+}
+
