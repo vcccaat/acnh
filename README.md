@@ -1,19 +1,15 @@
 
-# Animal Crossing: New Horizons Collections Website
-
-## Try it out
-http://boxing-backbacon-63666.herokuapp.com/
-
-
-## Updates
+## Animal Crossing: New Horizons Guide
+Website: https://nsds.info <br/>
+Updates:
 - Add sea creatures guide for July update
 - English and Chinese versions are available!
 - Add hybrid flowers tricks
 - Add furnitures guide
-- Add features: keyword searching; filtering based on location, month; sort furniture items by price
+- Add features: keyword searching; filtering based on location, month, and item size; sort item by price
 
 
-## Run the project
+To run the project:
 1. Clone this repo
 2. Run `npm install`
 3. Run `npm start`
