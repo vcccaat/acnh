@@ -13,7 +13,7 @@
     "react-dom": "^16.12.0",
     "react-interpolate-component": "^0.12.0",
     "react-load-image": "^0.1.7",
-    "react-scripts": "^3.4.0",
+    "react-scripts": "^5.0.1",
     "react-spinners": "^0.8.3",
     "react-translate-component": "^0.15.1",
     "tachyons": "^4.11.1"
