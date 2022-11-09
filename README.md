@@ -1,6 +1,6 @@
 
 ## Animal Crossing: New Horizons Guide
-Website: https://nsds.info <br/>
+
 Updates:
 - Add sea creatures guide for July update
 - English and Chinese versions are available!
